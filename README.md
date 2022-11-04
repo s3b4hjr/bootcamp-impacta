@@ -91,9 +91,12 @@ Conectar no cluster GKE
 ```
 gcloud container clusters get-credentials gke-cluster --zone us-central1-a --project PROJECT_ID
 ```
-
+```
 helm secrets upgrade --install bootcamp helm --wait --create-namespace --namespace bootcamp --values helm/environments/prod/values.yaml --values helm/environments/prod/secrets.yaml
-
+```
+```
 kubectl -n bootcamp port-forward services/bootcamp 5000:5000
-
+```
+```
 curl http://localhost:5000
+```
